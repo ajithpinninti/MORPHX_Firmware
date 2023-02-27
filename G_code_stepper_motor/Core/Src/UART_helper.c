@@ -56,6 +56,13 @@ void UART_Command(char *tokens[]){
 		//homing
 		Homing_motor(tokens);
 
+		//resetting the parameters
+		Homing_completion();
+
+		//Sending completion status
+		memset(sending_data,0,sizeof(sending_data));
+		sprintf(sending_data,"Homed \n");
+		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
 
 		//sending response
 //		memset(sending_data,0,sizeof(sending_data));

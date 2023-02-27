@@ -590,6 +590,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			Homing_completion();
 
 			move((int32_t ) (steps_per_millimeters * 0.25));
+
 			runToPosition();
 			//setting speed again to intiate the HOMING
 			//otherwise _stepintervel became zero
@@ -620,10 +621,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 		HAL_NVIC_DisableIRQ(Z_END_STOP_EXTI_IRQn);
 
-		//Sending completion
-		memset(sending_data,0,sizeof(sending_data));
-		sprintf(sending_data,"Homed \n");
-		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
 
 		return;
 
@@ -721,6 +718,21 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
     else
     {
+    	/****** Special Character Checking ***********/
+    	if(rxByte == 'e' ){
+		//sending encoder value through UART
+
+		memset(sending_data,0,sizeof(sending_data));
+		sprintf(sending_data,"%ld\n",__HAL_TIM_GET_COUNTER(&htim2) );
+		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
+
+
+		 /* Restart the UART Interrupt */
+		HAL_UART_Receive_IT(&huart2, &rxByte, 1);
+
+		return;
+    	}
+
         /* Add the character to the buffer */
         RxBuffer[RxIndex] = rxByte;
         RxIndex++;
@@ -732,6 +744,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 	}
 }
+
 
 
 void __delay_ms(int32_t k){
