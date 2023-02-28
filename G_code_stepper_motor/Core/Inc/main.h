@@ -31,6 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "main_config.h"
+#include "circular_queue.h"
 #include "math.h"
 #include "string.h"
 #include "stdio.h"
@@ -110,7 +112,7 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 extern uint8_t Exec_command;
-extern uint8_t RxBuffer[50];
+extern volatile char RxBuffer[140];
 extern char sending_data[50] ;
 extern int32_t max_pos;
 extern int32_t min_pos;
@@ -121,7 +123,6 @@ extern uint8_t HOMED ;
 //const float steps_per_millimeters
 /* USER CODE END Private defines */
 
-#define steps_per_millimeters 50000
 #ifdef __cplusplus
 }
 #endif

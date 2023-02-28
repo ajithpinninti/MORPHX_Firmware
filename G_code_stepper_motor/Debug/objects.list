@@ -1,6 +1,7 @@
 "./Core/Src/GCode_helper.o"
 "./Core/Src/LedDriver.o"
 "./Core/Src/UART_helper.o"
+"./Core/Src/circular_queue.o"
 "./Core/Src/main.o"
 "./Core/Src/stepper.o"
 "./Core/Src/stm32f4xx_hal_msp.o"

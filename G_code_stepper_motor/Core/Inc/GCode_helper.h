@@ -16,6 +16,14 @@
 
 /************************ Function Prototype ******************/
 
+
+/*Checks wheter received command is valid or not
+ * @ params
+ * RxBuffer -> Contains received command from serial device
+ *
+ */
+
+int is_command_valid(char* command);
 /*Setting up the absolute motor position,
  * @ params
  * tokens -> contains splitted receiver buffer

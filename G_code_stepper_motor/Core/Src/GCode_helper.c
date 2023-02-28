@@ -7,6 +7,45 @@
 
 #include "GCode_helper.h"
 
+char* G_codes[] = {"G90","G91","HOME","MOTPOS","ENCZERO","ENCVAL"};
+
+int is_command_valid(char* command){
+
+	char* Temp_Buffer = (char *) malloc(strlen(command)+1);
+
+	strcpy(Temp_Buffer,command);
+
+	int MAX_TOKENS = 3;
+	char *token;
+	char *tokens[3] = {0};
+	int i = 0;
+
+
+	/* Split the string by the delimiter " " */
+	token = strtok((char *)Temp_Buffer, " ");
+
+	while (token != NULL && i < MAX_TOKENS) {
+		tokens[i] = token;
+		i++;
+		token = strtok(NULL, " ");
+	}
+
+	int total_commands = sizeof(G_codes)/sizeof(char *);
+	for(int val=0;val < total_commands;val++){
+
+		if(strcmp(tokens[0],G_codes[val]) == 0 )
+		{
+			free(Temp_Buffer);
+			return 1;
+		}
+	}
+	free(Temp_Buffer);
+	return 0;
+
+//	if(strcmp(tokens[0],"G90") == 0 ){
+//	}
+
+}
 
 void Setup_Absolute_position(char *tokens[] ){
 

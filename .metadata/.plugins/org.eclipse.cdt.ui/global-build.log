@@ -1,18 +1,11 @@
-11:04:19 **** Clean-only build of configuration Debug for project G_code_stepper_motor ****
+17:18:17 **** Clean-only build of configuration Debug for project G_code_stepper_motor ****
 make -j12 clean 
 rm -rf ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.su
 rm -rf ./Core/Startup/startup_stm32f446retx.d ./Core/Startup/startup_stm32f446retx.o
-rm -rf ./Core/Src/GCode_helper.d ./Core/Src/GCode_helper.o ./Core/Src/GCode_helper.su ./Core/Src/LedDriver.d ./Core/Src/LedDriver.o ./Core/Src/LedDriver.su ./Core/Src/UART_helper.d ./Core/Src/UART_helper.o ./Core/Src/UART_helper.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stepper.d ./Core/Src/stepper.o ./Core/Src/stepper.su ./Core/Src/stm32f4xx_hal_msp.d ./Core/Src/stm32f4xx_hal_msp.o ./Core/Src/stm32f4xx_hal_msp.su ./Core/Src/stm32f4xx_it.d ./Core/Src/stm32f4xx_it.o ./Core/Src/stm32f4xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f4xx.d ./Core/Src/system_stm32f4xx.o ./Core/Src/system_stm32f4xx.su
+rm -rf ./Core/Src/GCode_helper.d ./Core/Src/GCode_helper.o ./Core/Src/GCode_helper.su ./Core/Src/LedDriver.d ./Core/Src/LedDriver.o ./Core/Src/LedDriver.su ./Core/Src/UART_helper.d ./Core/Src/UART_helper.o ./Core/Src/UART_helper.su ./Core/Src/circular_queue.d ./Core/Src/circular_queue.o ./Core/Src/circular_queue.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stepper.d ./Core/Src/stepper.o ./Core/Src/stepper.su ./Core/Src/stm32f4xx_hal_msp.d ./Core/Src/stm32f4xx_hal_msp.o ./Core/Src/stm32f4xx_hal_msp.su ./Core/Src/stm32f4xx_it.d ./Core/Src/stm32f4xx_it.o ./Core/Src/stm32f4xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f4xx.d ./Core/Src/system_stm32f4xx.o ./Core/Src/system_stm32f4xx.su
 rm -rf G_code_stepper_motor.elf G_code_stepper_motor.list G_code_stepper_motor.map default.size.stdout
  
-11:04:20 **** Clean-only build of configuration Debug for project G_code_stepper_motor ****
-make -j12 clean 
-rm -rf ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.su ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.su
-rm -rf ./Core/Startup/startup_stm32f446retx.d ./Core/Startup/startup_stm32f446retx.o
-rm -rf ./Core/Src/GCode_helper.d ./Core/Src/GCode_helper.o ./Core/Src/GCode_helper.su ./Core/Src/LedDriver.d ./Core/Src/LedDriver.o ./Core/Src/LedDriver.su ./Core/Src/UART_helper.d ./Core/Src/UART_helper.o ./Core/Src/UART_helper.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stepper.d ./Core/Src/stepper.o ./Core/Src/stepper.su ./Core/Src/stm32f4xx_hal_msp.d ./Core/Src/stm32f4xx_hal_msp.o ./Core/Src/stm32f4xx_hal_msp.su ./Core/Src/stm32f4xx_it.d ./Core/Src/stm32f4xx_it.o ./Core/Src/stm32f4xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f4xx.d ./Core/Src/system_stm32f4xx.o ./Core/Src/system_stm32f4xx.su
-rm -rf G_code_stepper_motor.elf G_code_stepper_motor.list G_code_stepper_motor.map default.size.stdout
- 
-11:04:20 **** Build of configuration Debug for project G_code_stepper_motor ****
+17:18:19 **** Build of configuration Debug for project G_code_stepper_motor ****
 make -j12 all 
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
@@ -35,28 +28,657 @@ arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP 
 arm-none-eabi-gcc "../Core/Src/GCode_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/GCode_helper.d" -MT"Core/Src/GCode_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GCode_helper.o"
 arm-none-eabi-gcc "../Core/Src/LedDriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LedDriver.d" -MT"Core/Src/LedDriver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LedDriver.o"
 arm-none-eabi-gcc "../Core/Src/UART_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UART_helper.d" -MT"Core/Src/UART_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/UART_helper.o"
+arm-none-eabi-gcc "../Core/Src/circular_queue.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/circular_queue.d" -MT"Core/Src/circular_queue.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/circular_queue.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/stepper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stepper.d" -MT"Core/Src/stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stepper.o"
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+../Core/Src/circular_queue.c: In function 'enqueue':
+../Core/Src/circular_queue.c:31:20: warning: passing argument 1 of 'strcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   31 |     strcpy(q->items[q->rear], item);
+      |            ~~~~~~~~^~~~~~~~~
+In file included from ../Core/Src/circular_queue.c:3:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:38:16: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   38 | char  *strcpy (char *__restrict, const char *__restrict);
+      |                ^
+../Core/Src/circular_queue.c: In function 'dequeue':
+../Core/Src/circular_queue.c:39:8: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   39 |   item = q->items[q->front];
+      |        ^
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:623:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  623 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:721:18: warning: pointer targets in passing argument 1 of 'strtok' differ in signedness [-Wpointer-sign]
+  721 |   token = strtok(RxBuffer, "\r");
+      |                  ^~~~~~~~
+      |                  |
+      |                  uint8_t * {aka unsigned char *}
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:50:16: note: expected 'char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   50 | char  *strtok (char *__restrict, const char *__restrict);
+      |                ^
 arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
 arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
 arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
-arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Z_motor_driver\Z_motor_Encoder_run\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: G_code_stepper_motor.elf
  
 arm-none-eabi-size   G_code_stepper_motor.elf 
 arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
    text	   data	    bss	    dec	    hex	filename
-  45240	    572	   2244	  48056	   bbb8	G_code_stepper_motor.elf
+  46668	    596	   5348	  52612	   cd84	G_code_stepper_motor.elf
 Finished building: default.size.stdout
  
 Finished building: G_code_stepper_motor.list
  
-11:06:59 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+17:18:47 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:623:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  623 |   memset(command,0,sizeof(command));
+      |                          ^
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46668	    596	   5348	  52612	   cd84	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:18:52 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
 make -j12 all 
 arm-none-eabi-size   G_code_stepper_motor.elf 
    text	   data	    bss	    dec	    hex	filename
-  45240	    572	   2244	  48056	   bbb8	G_code_stepper_motor.elf
+  46668	    596	   5348	  52612	   cd84	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+17:18:56 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46668	    596	   5348	  52612	   cd84	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+17:27:08 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:624:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  624 |   memset(command,0,sizeof(command));
+      |                          ^
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46676	    596	   5348	  52620	   cd8c	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:27:11 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46676	    596	   5348	  52620	   cd8c	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+17:47:48 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:624:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  624 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:722:28: error: 'buffer' undeclared (first use in this function); did you mean 'RxBuffer'?
+  722 |   char* space_ptr = strstr(buffer, "\r");
+      |                            ^~~~~~
+      |                            RxBuffer
+../Core/Src/main.c:722:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:728:11: warning: implicit declaration of function 'isspace' [-Wimplicit-function-declaration]
+  728 |    while (isspace(*space_ptr)) {
+      |           ^~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:48:19 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:624:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  624 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:722:28: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  722 |   char* space_ptr = strstr(RxBuffer, "\r");
+      |                            ^~~~~~~~
+      |                            |
+      |                            uint8_t * {aka unsigned char *}
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:728:11: warning: implicit declaration of function 'isspace' [-Wimplicit-function-declaration]
+  728 |    while (isspace(*space_ptr)) {
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46800	    596	   5348	  52744	   ce08	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:48:35 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:624:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  624 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:728:11: warning: implicit declaration of function 'isspace' [-Wimplicit-function-declaration]
+  728 |    while (isspace(*space_ptr)) {
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46800	    596	   5348	  52744	   ce08	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:49:22 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:55:36 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/GCode_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/GCode_helper.d" -MT"Core/Src/GCode_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GCode_helper.o"
+arm-none-eabi-gcc "../Core/Src/LedDriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LedDriver.d" -MT"Core/Src/LedDriver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LedDriver.o"
+arm-none-eabi-gcc "../Core/Src/UART_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UART_helper.d" -MT"Core/Src/UART_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/UART_helper.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stepper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stepper.d" -MT"Core/Src/stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stepper.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:182:39: warning: pointer targets in passing argument 2 of 'HAL_UARTEx_ReceiveToIdle_IT' differ in signedness [-Wpointer-sign]
+  182 |  HAL_UARTEx_ReceiveToIdle_IT(&huart2, RxBuffer, sizeof(RxBuffer));
+      |                                       ^~~~~~~~
+      |                                       |
+      |                                       char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:734:83: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  734 | HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:253:41: warning: pointer targets in passing argument 2 of 'HAL_UARTEx_ReceiveToIdle_IT' differ in signedness [-Wpointer-sign]
+  253 |    HAL_UARTEx_ReceiveToIdle_IT(&huart2, RxBuffer, sizeof(RxBuffer));
+      |                                         ^~~~~~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:734:83: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  734 | HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:751:41: warning: pointer targets in passing argument 2 of 'HAL_UARTEx_ReceiveToIdle_IT' differ in signedness [-Wpointer-sign]
+  751 |    HAL_UARTEx_ReceiveToIdle_IT(&huart2, RxBuffer, sizeof(RxBuffer));
+      |                                         ^~~~~~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:734:83: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  734 | HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:55:57 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:253:41: warning: pointer targets in passing argument 2 of 'HAL_UARTEx_ReceiveToIdle_IT' differ in signedness [-Wpointer-sign]
+  253 |    HAL_UARTEx_ReceiveToIdle_IT(&huart2, RxBuffer, sizeof(RxBuffer));
+      |                                         ^~~~~~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:734:83: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  734 | HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:751:41: warning: pointer targets in passing argument 2 of 'HAL_UARTEx_ReceiveToIdle_IT' differ in signedness [-Wpointer-sign]
+  751 |    HAL_UARTEx_ReceiveToIdle_IT(&huart2, RxBuffer, sizeof(RxBuffer));
+      |                                         ^~~~~~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:734:83: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  734 | HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:56:22 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:57:09 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:741:18: error: 'rxbuffer' undeclared (first use in this function); did you mean 'RxBuffer'?
+  741 |   token = strtok(rxbuffer, "\r");
+      |                  ^~~~~~~~
+      |                  RxBuffer
+../Core/Src/main.c:741:18: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:777:37: error: 'rxbuffer' undeclared (first use in this function); did you mean 'RxBuffer'?
+  777 |             enqueue(&CommandBuffer, rxbuffer);
+      |                                     ^~~~~~~~
+      |                                     RxBuffer
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:57:37 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:741:18: error: 'rxbuffer' undeclared (first use in this function); did you mean 'RxBuffer'?
+  741 |   token = strtok(rxbuffer, "\r");
+      |                  ^~~~~~~~
+      |                  RxBuffer
+../Core/Src/main.c:741:18: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:777:37: error: 'rxbuffer' undeclared (first use in this function); did you mean 'RxBuffer'?
+  777 |             enqueue(&CommandBuffer, rxbuffer);
+      |                                     ^~~~~~~~
+      |                                     RxBuffer
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:58:39 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+17:59:03 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+18:00:00 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+18:26:43 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:59:15: error: conflicting types for 'RxBuffer'
+   59 | volatile char RxBuffer[140];
+      |               ^~~~~~~~
+In file included from ../Core/Src/main.c:20:
+../Core/Inc/main.h:115:13: note: previous declaration of 'RxBuffer' was here
+  115 | extern char RxBuffer[140];
+      |             ^~~~~~~~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:724:28: warning: passing argument 1 of 'strstr' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  724 |   char* space_ptr = strstr(RxBuffer, "\r");
+      |                            ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:48:16: note: expected 'const char *' but argument is of type 'volatile char *'
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:741:18: warning: passing argument 1 of 'strtok' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  741 |   token = strtok(RxBuffer, "\r");
+      |                  ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:50:16: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   50 | char  *strtok (char *__restrict, const char *__restrict);
+      |                ^
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:777:37: warning: passing argument 2 of 'enqueue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  777 |             enqueue(&CommandBuffer, RxBuffer);
+      |                                     ^~~~~~~~
+In file included from ../Core/Inc/main.h:35,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/circular_queue.h:17:53: note: expected 'const char *' but argument is of type 'volatile char *'
+   17 | void enqueue(volatile CircularQueue* q, const char* item);
+      |                                         ~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:27:02 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/GCode_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/GCode_helper.d" -MT"Core/Src/GCode_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GCode_helper.o"
+arm-none-eabi-gcc "../Core/Src/LedDriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LedDriver.d" -MT"Core/Src/LedDriver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LedDriver.o"
+arm-none-eabi-gcc "../Core/Src/UART_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UART_helper.d" -MT"Core/Src/UART_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/UART_helper.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stepper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stepper.d" -MT"Core/Src/stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stepper.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/UART_helper.c: In function 'UART_Command':
+../Core/Src/UART_helper.c:21:10: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   21 |   memset(RxBuffer,0,sizeof(RxBuffer));
+      |          ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:40:10: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   40 |   memset(RxBuffer,0,sizeof(RxBuffer));
+      |          ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:76:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   76 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:92:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:102:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  102 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:108:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  108 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:724:28: warning: passing argument 1 of 'strstr' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  724 |   char* space_ptr = strstr(RxBuffer, "\r");
+      |                            ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:48:16: note: expected 'const char *' but argument is of type 'volatile char *'
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c:730:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  730 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:741:18: warning: passing argument 1 of 'strtok' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  741 |   token = strtok(RxBuffer, "\r");
+      |                  ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:50:16: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   50 | char  *strtok (char *__restrict, const char *__restrict);
+      |                ^
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:777:37: warning: passing argument 2 of 'enqueue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  777 |             enqueue(&CommandBuffer, RxBuffer);
+      |                                     ^~~~~~~~
+In file included from ../Core/Inc/main.h:35,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/circular_queue.h:17:53: note: expected 'const char *' but argument is of type 'volatile char *'
+   17 | void enqueue(volatile CircularQueue* q, const char* item);
+      |                                         ~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+18:27:30 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+18:27:34 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46792	    596	   5348	  52736	   ce00	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+18:31:53 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:626:26: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  626 |   memset(command,0,sizeof(command));
+      |                          ^
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:741:18: warning: passing argument 1 of 'strtok' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  741 |   token = strtok(RxBuffer, "\r");
+      |                  ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:50:16: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   50 | char  *strtok (char *__restrict, const char *__restrict);
+      |                ^
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:777:37: warning: passing argument 2 of 'enqueue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  777 |             enqueue(&CommandBuffer, RxBuffer);
+      |                                     ^~~~~~~~
+In file included from ../Core/Inc/main.h:35,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/circular_queue.h:17:53: note: expected 'const char *' but argument is of type 'volatile char *'
+   17 | void enqueue(volatile CircularQueue* q, const char* item);
+      |                                         ~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: G_code_stepper_motor.elf
+ 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+arm-none-eabi-objdump -h -S  G_code_stepper_motor.elf  > "G_code_stepper_motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  46676	    596	   5348	  52620	   cd8c	G_code_stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: G_code_stepper_motor.list
+ 
+18:32:07 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-size   G_code_stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46676	    596	   5348	  52620	   cd8c	G_code_stepper_motor.elf
 Finished building: default.size.stdout
  

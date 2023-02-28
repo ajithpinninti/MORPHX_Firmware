@@ -21,6 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "circular_queue.h"
+#include <ctype.h>
 
 /* USER CODE END Includes */
 
@@ -49,20 +51,22 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
-/****************************** UART commands *****************/
+/*********************** Buffer commands *****************/
 
-uint8_t RxBuffer[50]; //UART command buffer
+ CircularQueue CommandBuffer ;
+char *command;
+
+volatile char RxBuffer[140];
 uint8_t RxIndex = 0;
 uint8_t Exec_command = 0;
 uint8_t rxByte;
-char sending_data[50] = "Nan \n"; //
+char sending_data[50] = "Nan \n";
 uint8_t RX_Char;
 /**************************************************************/
 
 /************ Z Stepper Motor varibles ************/
 
 
-//const float steps_per_millimeters = 50000.0; // configure steps per millimeter
 float targetPos = -1.0; //in millimeters
 
 const int32_t min_pos_mm = 0;
@@ -175,7 +179,8 @@ int main(void)
 
 /************************** UART Initialisation *********************/
 	// initiating interrupt for PC data receiving
-	HAL_UART_Receive_IT(&huart2, &rxByte, 1);
+	HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t *)RxBuffer, sizeof(RxBuffer));
+
 
 
 
@@ -206,8 +211,10 @@ int main(void)
 
 	//runToPosition(); //moving to desired positions
 
-/*********************************************************************/
+/************************ Buffer Intialization *************************/
+initQueue(&CommandBuffer) ;
 
+/*********************************************************************/
 
 
   /* USER CODE END 2 */
@@ -220,8 +227,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if(Exec_command){
-	//			char str[] = "G91 Z30 F300 \r";
+	if(!isEmpty(&CommandBuffer)){
+
+		command = dequeue(&CommandBuffer);
 		int MAX_TOKENS = 3;
 		char *token;
 		char *tokens[3] = {0};
@@ -229,7 +237,7 @@ int main(void)
 
 
 		/* Split the string by the delimiter " " */
-		token = strtok((char *)RxBuffer, " ");
+		token = strtok((char *)command, " ");
 
 		while (token != NULL && i < MAX_TOKENS) {
 			tokens[i] = token;
@@ -237,8 +245,13 @@ int main(void)
 			token = strtok(NULL, " ");
 		}
 
-		//Excute the command
+		//Execute the command
 		UART_Command(tokens);
+	}
+
+	else{
+	  HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
+
 	}
   }
   /* USER CODE END 3 */
@@ -610,7 +623,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 
 		Exec_command = 0; //stop the motor
-		memset(RxBuffer,0,sizeof(RxBuffer));
+		memset(command,0,sizeof(command));
 
 		//homing configuration
 		Homing_completion();
@@ -693,12 +706,61 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 }
 
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
+
+	if(huart == &huart2){
+	  /* Add null character to terminate string */
+		if(Size < sizeof(RxBuffer)){
+			RxBuffer[Size] = 0;
+		}
+		else{
+			RxBuffer[Size-1] = 0;
+		}
+
+		char *token;
+//
+//		// Replace all occurrences of "\r " with "\r" (if any)
+//		char* space_ptr = strstr(RxBuffer, "\r");
+//		while (space_ptr != NULL) {
+//			// Skip over the "\r" delimiter
+//			space_ptr++;
+//
+//			// Remove any leading spaces after the "\r" delimiter
+//			while (isspace(*space_ptr)) {
+//				memmove(space_ptr, space_ptr + 1, strlen(space_ptr + 1) + 1);
+//			}
+//
+//			// Find the next occurrence of "\r"
+//			space_ptr = strstr(space_ptr, "\r");
+//		}
+
+
+
+		/* Split the string by the delimiter "\r" */
+		token = strtok(RxBuffer, "\r");
+
+		while (token != NULL ) {
+			if(is_command_valid(token))
+			{
+				enqueue(&CommandBuffer,token);
+			}
+			token = strtok(NULL, "\r");
+		}
+
+	  HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
+
+	}
+
+}
+
+
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 
 	if(huart == &huart2){
     /* Receive one byte in the receive data register */
-//    uint8_t rxByte = (uint8_t)(huart->Instance->DR & (uint8_t)0x00FF);
 
     /* Check if the received character is a /r or buffer is full */
     if (rxByte == '\r' || RxIndex == 50 - 1) // 50 is buffer length
@@ -708,6 +770,16 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
         /* Add null character to terminate string */
         RxBuffer[RxIndex] = 0;
+
+        /*Check whether command is valid or not*/
+        if(is_command_valid((char*)RxBuffer))
+        {
+            enqueue(&CommandBuffer, RxBuffer);
+        }
+        else{
+        	NULL;
+        }
+
 
         /* Resetting RxIndex to zero */
         RxIndex = 0;

@@ -64,14 +64,6 @@ void UART_Command(char *tokens[]){
 		sprintf(sending_data,"Homed \n");
 		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
 
-		//sending response
-//		memset(sending_data,0,sizeof(sending_data));
-//		sprintf(sending_data,"HOMED \n");
-//		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
-
-		//Excute_command make zero and Reset the buffer
-		//Exec_command = 0;
-		//Exec_command made zero by endstop
 		}
 		else if(strcmp(tokens[0],"MOTPOS") == 0){
 			//sending motor current position
