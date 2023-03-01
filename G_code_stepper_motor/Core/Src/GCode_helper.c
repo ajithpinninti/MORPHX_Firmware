@@ -7,14 +7,29 @@
 
 #include "GCode_helper.h"
 
-Status_buff Mot_Status =  {0};
 
+Driver_status Driv_status = {0};
 
 char* G_codes[] = {"G90","G91","HOME","MOTPOS","ENCZERO","ENCVAL"};
 
-char* Instant_G_codes[] = {"M414 \r"};
+char* Instant_G_codes[] = {"M414"};
 
-int is_instant_command(char* command){
+int total_instant_commands = sizeof(Instant_G_codes)/sizeof(char *);
+
+int total_commands = sizeof(G_codes)/sizeof(char *);
+
+
+int is_instant_command(char *tokens[]){
+
+	for(int val=0;val < total_instant_commands;val++){
+
+		if(strcmp(tokens[0],Instant_G_codes[val]) == 0 )
+		{
+			send_json_data(&Driv_status);
+			return 1;
+		}
+	}
+
 	return 0;
 
 }
@@ -40,7 +55,12 @@ int is_command_valid(char* command){
 		token = strtok(NULL, " ");
 	}
 
-	int total_commands = sizeof(G_codes)/sizeof(char *);
+	if( is_instant_command(tokens)){
+		/* Skipping enqueue for instant command */
+		free(Temp_Buffer);
+		return 2;
+	}
+
 	for(int val=0;val < total_commands;val++){
 
 		if(strcmp(tokens[0],G_codes[val]) == 0 )
@@ -134,12 +154,20 @@ void Run_Motor(void){
 	return;
 }
 
-void send_json_data(Status_buff* status){
+void send_json_data(Driver_status* status){
 
     char json_string[100] = {0};   // Initialize JSON string buffer
 
+#if IS_ENCODER_THERE
+    status ->encoder_val = __HAL_TIM_GET_COUNTER(&htim2);
+#else
+    status ->encoder_val = (uint32_t)-100;
+#endif
+
+    status -> Motpos = (float) currentPosition()/steps_per_millimeters;
+
     // Create JSON string
-    sprintf(json_string, "{\"Status\":%lu,\"MOTPOS\":%d,\"ENCVAL\":%d,\"busy\":%d}\r\n", status->Status, status->busy);
+    sprintf(json_string, "{\"STATUS\":%d,\"MOTPOS\":%0.2f,\"ENCVAL\":%lu}\r\n", status->mot_status,status->Motpos,status->encoder_val);
 
     // Send JSON string over UART
     HAL_UART_Transmit(&huart2, (uint8_t*)json_string, strlen(json_string), HAL_MAX_DELAY);

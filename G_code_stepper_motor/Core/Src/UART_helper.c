@@ -43,17 +43,6 @@ void UART_Command(char *tokens[]){
 
 		//Run the Motors
 		Run_Motor();
-
-		//Execute Command make zero and Reset the buffer
-		Exec_command = 0;
-		memset((void *)RxBuffer,0,sizeof(RxBuffer));
-
-
-		//sending the ready status
-		memset(sending_data,0,sizeof(sending_data));
-		sprintf(sending_data,"G90Completed \n");
-		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
-
 		}
 
 		else if(strcmp(tokens[0],"G91") == 0){
@@ -62,17 +51,6 @@ void UART_Command(char *tokens[]){
 
 		//RUN the MOTOR
 		Run_Motor();
-
-		//Execute Command make zero and Reset the buffer
-		Exec_command = 0;
-		memset((void *)RxBuffer,0,sizeof(RxBuffer));
-
-		//sending the ready status
-		memset(sending_data,0,sizeof(sending_data));
-		sprintf(sending_data,"G91Completed \n");
-		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
-
-
 		}
 
 		else if(strcmp(tokens[0],"HOME") == 0){
@@ -86,12 +64,6 @@ void UART_Command(char *tokens[]){
 
 		//resetting the parameters
 		Homing_completion();
-
-		//Sending completion status
-		memset(sending_data,0,sizeof(sending_data));
-		sprintf(sending_data,"Homed \n");
-		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
-
 		}
 		else if(strcmp(tokens[0],"MOTPOS") == 0){
 			//sending motor current position
@@ -99,25 +71,13 @@ void UART_Command(char *tokens[]){
 			sprintf(sending_data,"%0.2f\n",(float) currentPosition()/steps_per_millimeters );
 			HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
 
-			//Execute Command make zero and Reset the buffer
-			Exec_command = 0;
-			memset((void *)RxBuffer,0,sizeof(RxBuffer));
 		}
-
 		else if(strcmp(tokens[0],"ENCZERO") == 0){
 			//making encoder value zero
 
 			//Set encoder counting to zero
 			__HAL_TIM_SET_COUNTER(&htim2,0);
 
-			//sending the ready status
-//			memset(sending_data,0,sizeof(sending_data));
-//			sprintf(sending_data,"r\n");
-//			HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
-
-			//Execute Command make zero and Reset the buffer
-			Exec_command = 0;
-			memset(RxBuffer,0,sizeof(RxBuffer));
 		}
 		else if(strcmp(tokens[0],"ENCVAL") == 0){
 			//sending encoder value through UART
@@ -125,15 +85,10 @@ void UART_Command(char *tokens[]){
 			sprintf(sending_data,"%ld\n",__HAL_TIM_GET_COUNTER(&htim2) );
 			HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
 
-			//Execute Command make zero and Reset the buffer
-			Exec_command = 0;
-			memset(RxBuffer,0,sizeof(RxBuffer));
 		}
 		else{
 
-			//Execute Command make zero and Reset the buffer
-			Exec_command = 0;
-			memset(RxBuffer,0,sizeof(RxBuffer));
+
 		}
 
 

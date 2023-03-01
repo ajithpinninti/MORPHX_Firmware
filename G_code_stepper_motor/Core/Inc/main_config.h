@@ -13,7 +13,10 @@
 #define MAX_COMMANDS_PER_TIME 30
 #define steps_per_millimeters 50000
 
-
+/*
+ * Device configuration
+ */
+#define IS_ENCODER_THERE 1
 
 
 /*

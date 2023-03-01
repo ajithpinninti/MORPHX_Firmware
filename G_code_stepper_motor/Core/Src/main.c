@@ -216,7 +216,7 @@ initQueue(&CommandBuffer) ;
 /*********************************************************************/
 
 /**************************** Home Initialization ********************/
-HOMED = false;
+HOMED = true;
 Home_Pass = 0;
 /*********************************************************************/
 
@@ -232,7 +232,9 @@ Home_Pass = 0;
 
     /* USER CODE BEGIN 3 */
 	if(!isEmpty(&CommandBuffer)){
-		status->busy =
+
+		Driv_status.mot_status = MOT_BUSY; /* setting busy flag in the driver status */
+
 		command = dequeue(&CommandBuffer);
 		int MAX_TOKENS = 3;
 		char *token;
@@ -263,7 +265,8 @@ Home_Pass = 0;
 	}
 
 	else{
-	  HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
+		Driv_status.mot_status = MOT_IDLE;
+		HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
 
 	}
   }
@@ -736,7 +739,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 		}
 
 		// Replace all occurrences of "\r " with "\r" (if any)
-		char* space_ptr = strstr(RxBuffer, "\r");
+		char* space_ptr = strstr((void *)RxBuffer, "\r");
 		while (space_ptr != NULL) {
 			// Skip over the "\r" delimiter
 			space_ptr++;
@@ -757,7 +760,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 
 
 		/* Split the string by the delimiter "\r" */
-		token = strtok(RxBuffer, "\r");
+		token = strtok((void *)RxBuffer, "\r");
 
 		while (token != NULL && i < MAX_COMMANDS_PER_TIME) {
 			tokens[i] = token;
@@ -768,15 +771,31 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 
 		for(i=0;tokens[i]!=NULL;i++){
 
-			if(is_instant_command(tokens[i])){
-				continue;
-			}
-			if(is_command_valid(tokens[i])){
+			int valid = is_command_valid(tokens[i]);
+			if(valid == 1){
 				enqueue(&CommandBuffer,tokens[i]);
 			}
-		}
+			else if(valid == 0){
+				/* Bad command detected */
+				memset(sending_data,0,sizeof(sending_data));
+				sprintf(sending_data,"Bad Command\n");
+				HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
 
-	  HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
+				HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
+				return;
+
+			}
+			else{
+				/* Instant command */
+
+			}
+		}
+		/* Commands are good */
+		memset(sending_data,0,sizeof(sending_data));
+		sprintf(sending_data,"Ok\n");
+		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
+
+		HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));
 
 	}
 
@@ -802,7 +821,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         /*Check whether command is valid or not*/
         if(is_command_valid((char*)RxBuffer))
         {
-            enqueue(&CommandBuffer, RxBuffer);
+            enqueue(&CommandBuffer, (void *)RxBuffer);
         }
         else{
         	NULL;

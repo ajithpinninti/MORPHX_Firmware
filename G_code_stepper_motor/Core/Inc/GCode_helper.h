@@ -14,9 +14,6 @@
 #include "stepper.h"
 #include "main.h"
 
-/************************* Extern variables *****************/
-extern Status_buff status;
-
 /*************************  User Variables *******************/
 
 /*
@@ -34,13 +31,18 @@ typedef enum
  */
 typedef struct {
 
-	MOT_STATUS status;            // Busy flag
+	MOT_STATUS mot_status;            // Busy flag
 
-	uint32_t Motpos;
+	float  Motpos;
 
     uint32_t encoder_val;    // Encoder value
 
-} Status_buff ;
+} Driver_status ;
+
+
+/************************* variables Initialization *****************/
+extern Driver_status Driv_status;
+
 
 /************************ Function Prototype ******************/
 
@@ -82,6 +84,15 @@ void Homing_motor(char *tokens[] );
 //reset the position
 void Homing_completion(void);
 
+/*
+ *  send the status of driver in the json format
+ */
+void send_json_data(Driver_status* status);
+
+/*
+ *@ check whether given command is should be in Non Blocking Mode
+ */
+int is_instant_command(char *tokens[]);
 /*******************************************************************/
 
 #endif /* INC_GCODE_HELPER_H_ */
