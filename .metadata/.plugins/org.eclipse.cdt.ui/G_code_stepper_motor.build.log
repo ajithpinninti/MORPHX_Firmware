@@ -1,10 +1,134 @@
-09:32:44 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
-make -j16 all 
-arm-none-eabi-size   G_code_stepper_motor.elf 
-   text	   data	    bss	    dec	    hex	filename
-  46812	    596	   5348	  52756	   ce14	G_code_stepper_motor.elf
-Finished building: default.size.stdout
- 
+13:58:58 **** Incremental Build of configuration Debug for project G_code_stepper_motor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/GCode_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/GCode_helper.d" -MT"Core/Src/GCode_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GCode_helper.o"
+arm-none-eabi-gcc "../Core/Src/LedDriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LedDriver.d" -MT"Core/Src/LedDriver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LedDriver.o"
+arm-none-eabi-gcc "../Core/Src/UART_helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UART_helper.d" -MT"Core/Src/UART_helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/UART_helper.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stepper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stepper.d" -MT"Core/Src/stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stepper.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+In file included from ../Core/Src/GCode_helper.c:8:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+In file included from ../Core/Inc/main.h:41,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+../Core/Src/GCode_helper.c: In function 'send_json_data':
+../Core/Src/GCode_helper.c:142:98: error: 'Status_buff' has no member named 'Status'; did you mean 'status'?
+  142 |     sprintf(json_string, "{\"Status\":%lu,\"MOTPOS\":%d,\"ENCVAL\":%d,\"busy\":%d}\r\n", status->Status, status->busy);
+      |                                                                                                  ^~~~~~
+      |                                                                                                  status
+../Core/Src/GCode_helper.c:142:112: error: 'Status_buff' has no member named 'busy'
+  142 |     sprintf(json_string, "{\"Status\":%lu,\"MOTPOS\":%d,\"ENCVAL\":%d,\"busy\":%d}\r\n", status->Status, status->busy);
+      |                                                                                                                ^~
+../Core/Src/UART_helper.c: In function 'UART_Command':
+../Core/Src/UART_helper.c:120:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  120 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:130:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  130 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+../Core/Src/UART_helper.c:136:11: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  136 |    memset(RxBuffer,0,sizeof(RxBuffer));
+      |           ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Inc/UART_helper.h:13,
+                 from ../Core/Src/UART_helper.c:8:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'volatile char *'
+   33 | void *  memset (void *, int, size_t);
+      |                 ^~~~~~
+In file included from ../Core/Inc/main.h:41,
+                 from ../Core/Src/LedDriver.c:7:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/GCode_helper.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/main.h:41,
+                 from ../Core/Src/stm32f4xx_hal_msp.c:22:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/UART_helper.o] Error 1
+In file included from ../Core/Inc/main.h:41,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/LedDriver.o] Error 1
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:235:9: error: invalid type argument of '->' (have 'int')
+  235 |   status->busy =
+      |         ^~
+../Core/Src/main.c: In function 'HAL_UARTEx_RxEventCallback':
+../Core/Src/main.c:739:28: warning: passing argument 1 of 'strstr' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  739 |   char* space_ptr = strstr(RxBuffer, "\r");
+      |                            ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:48:16: note: expected 'const char *' but argument is of type 'volatile char *'
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+In file included from ../Core/Inc/main.h:41,
+                 from ../Core/Inc/stepper.h:13,
+                 from ../Core/Src/stepper.c:8:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c:745:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+  745 |    while (isspace(*space_ptr)) {
+      |                   ^~~~~~~~~~
+../Core/Src/main.c:760:18: warning: passing argument 1 of 'strtok' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  760 |   token = strtok(RxBuffer, "\r");
+      |                  ^~~~~~~~
+In file included from ../Core/Inc/main.h:37,
+                 from ../Core/Src/main.c:20:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\string.h:50:16: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   50 | char  *strtok (char *__restrict, const char *__restrict);
+      |                ^
+make: *** [Core/Src/subdir.mk:49: Core/Src/stm32f4xx_hal_msp.o] Error 1
+In file included from ../Core/Inc/main.h:41,
+                 from ../Core/Src/stm32f4xx_it.c:21:
+../Core/Inc/GCode_helper.h:18:8: error: unknown type name 'Status_buff'
+   18 | extern Status_buff status;
+      |        ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/stepper.o] Error 1
+make: *** [Core/Src/subdir.mk:49: Core/Src/stm32f4xx_it.o] Error 1
+../Core/Src/main.c:771:7: warning: implicit declaration of function 'is_instant_command' [-Wimplicit-function-declaration]
+  771 |    if(is_instant_command(tokens[i])){
+      |       ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:805:37: warning: passing argument 2 of 'enqueue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  805 |             enqueue(&CommandBuffer, RxBuffer);
+      |                                     ^~~~~~~~
+In file included from ../Core/Inc/main.h:35,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/circular_queue.h:20:53: note: expected 'const char *' but argument is of type 'volatile char *'
+   20 | void enqueue(volatile CircularQueue* q, const char* item);
+      |                                         ~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-09:32:45 Build Finished. 0 errors, 0 warnings. (took 409ms)
+13:58:58 Build Failed. 18 errors, 8 warnings. (took 345ms)
 

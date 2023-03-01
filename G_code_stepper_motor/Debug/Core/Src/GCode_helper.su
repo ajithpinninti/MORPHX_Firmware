@@ -1,6 +1,0 @@
-../Core/Src/GCode_helper.c:12:5:is_command_valid	56	static
-../Core/Src/GCode_helper.c:50:6:Setup_Absolute_position	32	static
-../Core/Src/GCode_helper.c:78:6:Setup_Relative_position	32	static
-../Core/Src/GCode_helper.c:102:6:Homing_motor	16	static
-../Core/Src/GCode_helper.c:114:6:Homing_completion	8	static
-../Core/Src/GCode_helper.c:123:6:Run_Motor	8	static

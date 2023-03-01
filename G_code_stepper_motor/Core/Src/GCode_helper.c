@@ -7,7 +7,17 @@
 
 #include "GCode_helper.h"
 
+Status_buff Mot_Status =  {0};
+
+
 char* G_codes[] = {"G90","G91","HOME","MOTPOS","ENCZERO","ENCVAL"};
+
+char* Instant_G_codes[] = {"M414 \r"};
+
+int is_instant_command(char* command){
+	return 0;
+
+}
 
 int is_command_valid(char* command){
 
@@ -100,21 +110,20 @@ void Setup_Relative_position(char *tokens[] ){
 }
 
 void Homing_motor(char *tokens[] ){
-	setMaxSpeed(2*home_speed); //MOVING IN ccw
-	setSpeed(-1*home_speed); //MOVING IN ccw
-
+	setMaxSpeed(2*HOME_SPEED); //MOVING IN ccw
+	setSpeed(-1*HOME_SPEED); //MOVING IN ccw
 
 	while(!HOMED){
 	runSpeed();
 	}
-	setCurrentPosition(0);
+	Homing_completion();
 	return;
 }
 
 void Homing_completion(void){
+	stop();
 	//resetting position parameters
 	setCurrentPosition(0);
-	stop();
 	//Resetting the encoder value to zero
 	__HAL_TIM_SET_COUNTER(&htim2,0);
 	return;
@@ -124,3 +133,16 @@ void Run_Motor(void){
 	runToPosition();
 	return;
 }
+
+void send_json_data(Status_buff* status){
+
+    char json_string[100] = {0};   // Initialize JSON string buffer
+
+    // Create JSON string
+    sprintf(json_string, "{\"Status\":%lu,\"MOTPOS\":%d,\"ENCVAL\":%d,\"busy\":%d}\r\n", status->Status, status->busy);
+
+    // Send JSON string over UART
+    HAL_UART_Transmit(&huart2, (uint8_t*)json_string, strlen(json_string), HAL_MAX_DELAY);
+
+}
+

@@ -71,19 +71,18 @@ float targetPos = -1.0; //in millimeters
 
 const int32_t min_pos_mm = 0;
 const float  max_pos_mm = 21; //in millimeters
-const float home_speed_mm = 1;
 const float Acceleration_mm = 80;
 int32_t min_pos = (int32_t ) (steps_per_millimeters * min_pos_mm);
 int32_t max_pos = (int32_t ) (steps_per_millimeters * max_pos_mm);
-int32_t home_speed = (int32_t) (steps_per_millimeters * home_speed_mm);
+
 
 float Acceleration = Acceleration_mm*steps_per_millimeters; //stepsPerSecondSquared
 
 int32_t Total_Steps;
 
 //z homing variables
-uint8_t Home_Pass = 0; // to make two pass of z homing
-uint8_t HOMED = false;
+volatile uint8_t Home_Pass = 0; // to make two pass of z homing
+volatile uint8_t HOMED = false;
 /*******************************************************************/
 
 /********** Encoder variables ************/
@@ -216,6 +215,11 @@ initQueue(&CommandBuffer) ;
 
 /*********************************************************************/
 
+/**************************** Home Initialization ********************/
+HOMED = false;
+Home_Pass = 0;
+/*********************************************************************/
+
 
   /* USER CODE END 2 */
 
@@ -228,7 +232,7 @@ initQueue(&CommandBuffer) ;
 
     /* USER CODE BEGIN 3 */
 	if(!isEmpty(&CommandBuffer)){
-
+		status->busy =
 		command = dequeue(&CommandBuffer);
 		int MAX_TOKENS = 3;
 		char *token;
@@ -245,8 +249,17 @@ initQueue(&CommandBuffer) ;
 			token = strtok(NULL, " ");
 		}
 
-		//Execute the command
-		UART_Command(tokens);
+		if(HOMED){
+
+			//Execute the command
+			UART_Command(tokens);
+		}
+		else{
+			//check and excute HOME command
+
+			HOMING_Command(tokens);
+
+		}
 	}
 
 	else{
@@ -587,7 +600,10 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+
+
 	if( GPIO_Pin == Z_END_STOP_Pin ){
+		// -> Falling Edge detected
 		/* Z_END_STOP detected ->
 		 * stop the homing motor
 		 *  reset the position
@@ -595,6 +611,15 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		 *
 		 */
 
+		/*
+		 * Debounce checking
+		 */
+		__delay_ms(1);
+
+		if(HAL_GPIO_ReadPin(Z_END_STOP_GPIO_Port, Z_END_STOP_Pin) != GPIO_PIN_RESET){
+			/* error signal detected */
+			return;
+		}
 
 		if(Home_Pass == 0){
 			// first pass
@@ -602,42 +627,33 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 			Homing_completion();
 
-			move((int32_t ) (steps_per_millimeters * 0.25));
-
+			move((int32_t ) (steps_per_millimeters * HOMING_PASS_BACK_MM));
 			runToPosition();
-			//setting speed again to intiate the HOMING
-			//otherwise _stepintervel became zero
-			setSpeed(-1*home_speed); //MOVING IN ccw
+
+
+			/* setting speed again to initiate the HOMING
+			 otherwise _stepintervel became zero */
+			setSpeed(-1*HOME_SPEED);  /* MOVING IN CCW */
 			return;
 		}
-		else if(Home_Pass == 1){
-
-			HOMED = true;
+		else{
+			HOMED = true; /* Homing is completed */
 			Home_Pass = 0;
 
-			move((int32_t ) (steps_per_millimeters * 0.25));
+			// come back to reactivate the sensor
+			move((int32_t ) (steps_per_millimeters * HOMING_PASS_BACK_MM));
 			runToPosition();
-			Homing_completion();
 
+			//resetting all the parameters
+			Homing_completion();
 		}
 
-
-		Exec_command = 0; //stop the motor
-		memset(command,0,sizeof(command));
-
-		//homing configuration
-		Homing_completion();
-		//disabling the Interrupt for End stop
-
-		//Set encoder counting to zero
-		__HAL_TIM_SET_COUNTER(&htim2,0);
-
 		HAL_NVIC_DisableIRQ(Z_END_STOP_EXTI_IRQn);
-
-
 		return;
 
 		}
+
+#if 0
 	else if(GPIO_Pin == Camera_input_Pin){
 		//Camera pulse detected
 
@@ -703,7 +719,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	else if(GPIO_Pin == P_limit_Pin){
 	// P_limit detected(Upper Limit)
 	}
-
+#endif
+	return;
 }
 
 
@@ -718,36 +735,45 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 			RxBuffer[Size-1] = 0;
 		}
 
-//
-//		// Replace all occurrences of "\r " with "\r" (if any)
-//		char* space_ptr = strstr(RxBuffer, "\r");
-//		while (space_ptr != NULL) {
-//			// Skip over the "\r" delimiter
-//			space_ptr++;
-//
-//			// Remove any leading spaces after the "\r" delimiter
-//			while (isspace(*space_ptr)) {
-//				memmove(space_ptr, space_ptr + 1, strlen(space_ptr + 1) + 1);
-//			}
-//
-//			// Find the next occurrence of "\r"
-//			space_ptr = strstr(space_ptr, "\r");
-//		}
+		// Replace all occurrences of "\r " with "\r" (if any)
+		char* space_ptr = strstr(RxBuffer, "\r");
+		while (space_ptr != NULL) {
+			// Skip over the "\r" delimiter
+			space_ptr++;
+
+			// Remove any leading spaces after the "\r" delimiter
+			while (isspace(*space_ptr)) {
+				memmove(space_ptr, space_ptr + 1, strlen(space_ptr + 1) + 1);
+			}
+			// Find the next occurrence of "\r"
+			space_ptr = strstr(space_ptr, "\r");
+		}
 
 
-		sprintf(RxBuffer, "G90 Z1 F3 \r G91 Z2 F4 \r");
+
 		char *token;
+		char *tokens[MAX_COMMANDS_PER_TIME] = {0};
+		int i = 0;
+
 
 		/* Split the string by the delimiter "\r" */
 		token = strtok(RxBuffer, "\r");
 
-		while (token != NULL ) {
-			if(is_command_valid(token))
-			{	char* temp = strndup(token,strlen(token));
-				enqueue(&CommandBuffer,temp);
-				free(temp);
-			}
+		while (token != NULL && i < MAX_COMMANDS_PER_TIME) {
+			tokens[i] = token;
+			i++;
 			token = strtok(NULL, "\r");
+			UNUSED(tokens);
+		}
+
+		for(i=0;tokens[i]!=NULL;i++){
+
+			if(is_instant_command(tokens[i])){
+				continue;
+			}
+			if(is_command_valid(tokens[i])){
+				enqueue(&CommandBuffer,tokens[i]);
+			}
 		}
 
 	  HAL_UARTEx_ReceiveToIdle_IT(&huart2, (uint8_t*)RxBuffer, sizeof(RxBuffer));

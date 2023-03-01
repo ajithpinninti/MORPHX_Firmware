@@ -7,6 +7,34 @@
 
 #include "UART_helper.h"
 
+
+void HOMING_Command(char *tokens[]){
+	if(strcmp(tokens[0],"HOME") == 0){
+
+		//enabling IRQ for Endstop button
+		HAL_NVIC_EnableIRQ(Z_END_STOP_EXTI_IRQn);
+		HOMED = false;
+
+		//homing
+		Homing_motor(tokens);
+
+		//resetting the parameters
+		Homing_completion();
+
+		//Sending completion status
+		memset(sending_data,0,sizeof(sending_data));
+		sprintf(sending_data,"Homed \n");
+		HAL_UART_Transmit(&huart2,(uint8_t*)sending_data,strlen(sending_data),HAL_MAX_DELAY);
+
+		}
+
+}
+
+//Need to be update
+ char*  Split_command(){
+	 return NULL;
+}
+
 void UART_Command(char *tokens[]){
 
 		if(strcmp(tokens[0],"G90") == 0 ){
@@ -18,7 +46,7 @@ void UART_Command(char *tokens[]){
 
 		//Execute Command make zero and Reset the buffer
 		Exec_command = 0;
-		memset(RxBuffer,0,sizeof(RxBuffer));
+		memset((void *)RxBuffer,0,sizeof(RxBuffer));
 
 
 		//sending the ready status
@@ -37,7 +65,7 @@ void UART_Command(char *tokens[]){
 
 		//Execute Command make zero and Reset the buffer
 		Exec_command = 0;
-		memset(RxBuffer,0,sizeof(RxBuffer));
+		memset((void *)RxBuffer,0,sizeof(RxBuffer));
 
 		//sending the ready status
 		memset(sending_data,0,sizeof(sending_data));
@@ -73,7 +101,7 @@ void UART_Command(char *tokens[]){
 
 			//Execute Command make zero and Reset the buffer
 			Exec_command = 0;
-			memset(RxBuffer,0,sizeof(RxBuffer));
+			memset((void *)RxBuffer,0,sizeof(RxBuffer));
 		}
 
 		else if(strcmp(tokens[0],"ENCZERO") == 0){

@@ -118,8 +118,8 @@ extern int32_t max_pos;
 extern int32_t min_pos;
 extern int32_t home_speed;
 
-extern uint8_t Home_Pass; // to make two pass of z homing
-extern uint8_t HOMED ;
+volatile extern uint8_t Home_Pass; // to make two pass of z homing
+volatile extern uint8_t HOMED ;
 //const float steps_per_millimeters
 /* USER CODE END Private defines */
 

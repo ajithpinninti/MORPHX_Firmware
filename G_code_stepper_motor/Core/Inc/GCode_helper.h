@@ -14,6 +14,34 @@
 #include "stepper.h"
 #include "main.h"
 
+/************************* Extern variables *****************/
+extern Status_buff status;
+
+/*************************  User Variables *******************/
+
+/*
+ * MOT_STATUS descrine the motor is in busy or ready status
+ */
+typedef enum
+{
+  MOT_BUSY = 0,
+  MOT_IDLE = 1
+}MOT_STATUS;
+
+
+/*
+ * MOTOR STATUS Data Types
+ */
+typedef struct {
+
+	MOT_STATUS status;            // Busy flag
+
+	uint32_t Motpos;
+
+    uint32_t encoder_val;    // Encoder value
+
+} Status_buff ;
+
 /************************ Function Prototype ******************/
 
 

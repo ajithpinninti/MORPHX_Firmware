@@ -16,5 +16,6 @@
 /************************ Function Prototype ******************/
 void UART_Command(char *tokens[]);
 
+void HOMING_Command(char *tokens[]);
 
 #endif /* INC_UART_HELPER_H_ */
