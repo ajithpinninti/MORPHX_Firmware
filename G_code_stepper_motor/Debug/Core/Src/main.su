@@ -8,6 +8,6 @@
 ../Core/Src/main.c:508:13:MX_GPIO_Init	48	static
 ../Core/Src/main.c:588:6:HAL_GPIO_EXTI_Callback	16	static
 ../Core/Src/main.c:710:6:HAL_UARTEx_RxEventCallback	24	static
-../Core/Src/main.c:759:6:HAL_UART_RxCpltCallback	16	static
-../Core/Src/main.c:822:6:__delay_ms	24	static
-../Core/Src/main.c:835:6:Error_Handler	8	static,ignoring_inline_asm
+../Core/Src/main.c:761:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/main.c:824:6:__delay_ms	24	static
+../Core/Src/main.c:837:6:Error_Handler	8	static,ignoring_inline_asm

@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\ajitp\OneDrive\Documents\Neuranics office work\Workspace\Morphx_firmware\MORPHX_Firmware\G_code_stepper_motor"/>
 			<item value="C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Z_motor_driver\Z_motor_Encoder_run\G_code_stepper_motor"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

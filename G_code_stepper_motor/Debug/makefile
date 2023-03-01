@@ -60,8 +60,8 @@ all: main-build
 main-build: G_code_stepper_motor.elf secondary-outputs
 
 # Tool invocations
-G_code_stepper_motor.elf G_code_stepper_motor.map: $(OBJS) $(USER_OBJS) C:\Users\Ajith\ Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Ajith Pinninti\Documents\Neuranics_Lab)Pvt_Ltd_Office_word\Workspace\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+G_code_stepper_motor.elf G_code_stepper_motor.map: $(OBJS) $(USER_OBJS) C:\Users\ajitp\OneDrive\Documents\Neuranics\ office\ work\Workspace\Morphx_firmware\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "G_code_stepper_motor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ajitp\OneDrive\Documents\Neuranics office work\Workspace\Morphx_firmware\MORPHX_Firmware\G_code_stepper_motor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G_code_stepper_motor.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

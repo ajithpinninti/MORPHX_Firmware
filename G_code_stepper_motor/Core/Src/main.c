@@ -718,7 +718,6 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 			RxBuffer[Size-1] = 0;
 		}
 
-		char *token;
 //
 //		// Replace all occurrences of "\r " with "\r" (if any)
 //		char* space_ptr = strstr(RxBuffer, "\r");
@@ -736,14 +735,17 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 //		}
 
 
+		sprintf(RxBuffer, "G90 Z1 F3 \r G91 Z2 F4 \r");
+		char *token;
 
 		/* Split the string by the delimiter "\r" */
 		token = strtok(RxBuffer, "\r");
 
 		while (token != NULL ) {
 			if(is_command_valid(token))
-			{
-				enqueue(&CommandBuffer,token);
+			{	char* temp = strndup(token,strlen(token));
+				enqueue(&CommandBuffer,temp);
+				free(temp);
 			}
 			token = strtok(NULL, "\r");
 		}
