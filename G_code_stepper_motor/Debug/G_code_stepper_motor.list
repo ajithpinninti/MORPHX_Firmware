@@ -2983,9 +2983,9 @@ initQueue(&CommandBuffer) ;
 /*********************************************************************/
 
 /**************************** Home Initialization ********************/
-HOMED = true;
+HOMED = false;
  8001bfa:	4b40      	ldr	r3, [pc, #256]	; (8001cfc <main+0x1e0>)
- 8001bfc:	2201      	movs	r2, #1
+ 8001bfc:	2200      	movs	r2, #0
  8001bfe:	701a      	strb	r2, [r3, #0]
 Home_Pass = 0;
  8001c00:	4b3f      	ldr	r3, [pc, #252]	; (8001d00 <main+0x1e4>)

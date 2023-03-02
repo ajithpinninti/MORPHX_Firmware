@@ -1,0 +1,5 @@
+--> Dynamic memory allocation is happening in the interrupt which not thread safe with C standar libraries of malloc(). Need to change everything into static
+--> After dynamic memory allocation, Ram may unable to find where free space is there. 
+--> Varibles are in the function some are in the loop with another function which is not recommended.
+--> Check abot static keyword and use it on required places.
+--> Check about memory leaks or not freeing places.
