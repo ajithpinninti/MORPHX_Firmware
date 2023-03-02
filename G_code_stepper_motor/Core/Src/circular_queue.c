@@ -32,7 +32,7 @@ void enqueue(volatile CircularQueue* q, const char* item) {
 }
 
 char * dequeue(volatile CircularQueue* q) {
-	  char* item = NULL;
+	char* item = NULL;
 	if (isEmpty(q)) {
 		printf("Queue is empty.\n");
 	} else {

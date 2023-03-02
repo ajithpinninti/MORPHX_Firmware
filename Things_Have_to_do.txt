@@ -3,3 +3,11 @@
 --> Varibles are in the function some are in the loop with another function which is not recommended.
 --> Check abot static keyword and use it on required places.
 --> Check about memory leaks or not freeing places.
+
+--> Some combination of the commands are working which are wrong. Need to update is_command_valid() funciton to it's optimum
+	'HOME '
+	'HOME \n' -> Need to make it react to the \r command 
+	'G90 Z10 F0' -> stucking the motor into the loop of run without speed
+	'G90 Z10 ' -> Need to take care of currently it taking reference of previous speed of the command
+	
+--> Check time is taking to complete the interrut task and it should be in the micro seconds. Based on that optimize the functions
